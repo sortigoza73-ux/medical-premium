@@ -1,0 +1,686 @@
+
+/* MEDICAL PREMIUM V4.1 — RESPONSIVE ART DIRECTION
+   Desktop styles remain untouched. This file only adapts the system.
+*/
+
+@media (max-width: 1150px){
+  html{scroll-padding-top:76px}
+
+  .mp-header{
+    height:76px;
+    grid-template-columns:minmax(0,1fr) auto auto;
+    gap:14px;
+  }
+  .mp-header>.mp-btn{height:46px;padding-inline:18px}
+  .mp-nav{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    padding:20px var(--page-x) 24px;
+    background:rgba(247,243,240,.985);
+    border-bottom:1px solid var(--line-color);
+    box-shadow:0 18px 40px rgba(39,36,35,.07);
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+  }
+  .mp-nav.is-open{display:flex}
+  .mp-nav a{
+    width:100%;
+    padding:14px 0;
+    border-bottom:1px solid var(--line-color);
+    font-size:11px;
+  }
+  .mp-nav a:last-child{border-bottom:0}
+  .mp-nav a.is-active:after{display:none}
+  .mp-menu{
+    display:block;
+    border:0;
+    background:transparent;
+    padding:8px;
+    cursor:pointer;
+  }
+  .mp-menu span{
+    display:block;
+    width:24px;
+    height:1px;
+    background:var(--medical-ink);
+    margin:6px 0;
+  }
+
+  .mp-hero{
+    min-height:auto;
+    grid-template-columns:minmax(390px,.88fr) minmax(0,1.12fr);
+  }
+  .mp-hero__copy{padding:72px 44px 48px}
+  .mp-hero__media{min-height:620px}
+  .mp-hero__features{grid-template-columns:1fr 1fr}
+
+  .mp-services__grid,
+  .mp-about__grid,
+  .mp-trajectory__top,
+  .mp-process__top,
+  .mp-testimonials__hero,
+  .mp-life__head,
+  .mp-contact__grid{
+    grid-template-columns:1fr;
+  }
+
+  .mp-services__grid,.mp-about__grid{gap:48px}
+  .mp-services__photo{position:static}
+  .mp-services__photo figure{height:560px}
+  .mp-about__visual{max-width:760px}
+  .mp-about__visual figure{height:600px}
+  .mp-trajectory__top{gap:42px}
+  .mp-process__top{gap:0}
+  .mp-process__copy{padding:0 0 44px}
+  .mp-process__media{min-height:560px}
+  .mp-testimonials__photo{min-height:560px}
+  .mp-trust{margin-left:0}
+  .mp-life__head{gap:24px}
+  .mp-contact__visual{min-height:620px}
+}
+
+@media (max-width: 760px){
+  :root{
+    --page-x:22px;
+    --section-y-mobile:72px;
+  }
+
+  html{
+    scroll-padding-top:68px;
+    font-size:16px;
+  }
+
+  body{background:var(--medical-paper)}
+
+  /* HEADER — compact, editorial, usable */
+  .mp-header{
+    height:68px;
+    padding:0 18px;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:8px;
+  }
+  .mp-header>.mp-btn{display:none}
+  .mp-brand{
+    grid-template-columns:auto 1px minmax(0,1fr);
+    gap:10px;
+    min-width:0;
+  }
+  .mp-brand__mark{font-size:34px}
+  .mp-brand__divider{height:36px}
+  .mp-brand__name{
+    font-size:11px;
+    line-height:1.12;
+    letter-spacing:.055em;
+    white-space:normal;
+  }
+  .mp-brand__role{
+    display:block;
+    margin-top:4px;
+    font-size:7.5px;
+    line-height:1.3;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .mp-nav{padding:14px 22px 20px}
+  .mp-menu{justify-self:end}
+
+  .mp-shell{width:calc(100% - 44px)}
+
+  .mp-services,
+  .mp-about,
+  .mp-trajectory,
+  .mp-process,
+  .mp-testimonials,
+  .mp-life,
+  .mp-contact{
+    padding:var(--section-y-mobile) 0;
+  }
+
+  .mp-section-id{
+    margin-bottom:20px;
+    gap:10px;
+  }
+  .mp-section-id__line{width:42px}
+  .mp-section-id__label{font-size:9px}
+  .mp-number{font-size:21px}
+  .mp-lead{
+    font-size:15px;
+    line-height:1.68;
+  }
+
+  .mp-services__head h2,
+  .mp-about h2,
+  .mp-trajectory h2,
+  .mp-process h2,
+  .mp-testimonials h2,
+  .mp-life h2,
+  .mp-contact h2{
+    font-size:clamp(43px,12vw,58px);
+    line-height:1.02;
+  }
+
+  /* 01 HERO — text first, portrait second, no desktop squeeze */
+  .mp-hero{
+    display:flex;
+    flex-direction:column;
+    min-height:auto;
+  }
+  .mp-hero__copy{
+    padding:58px 22px 42px;
+  }
+  .mp-hero__eyebrow{
+    margin-bottom:20px;
+    font-size:9px;
+  }
+  .mp-hero h1{
+    font-size:clamp(48px,13.2vw,62px);
+    line-height:.99;
+    letter-spacing:-.035em;
+    max-width:none;
+  }
+  .mp-hero__rule{margin:24px 0 22px}
+  .mp-hero__lead{margin-bottom:28px}
+  .mp-hero__actions{
+    align-items:flex-start;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+  .mp-btn{height:50px;padding:0 20px}
+  .mp-hero__media{
+    order:2;
+    min-height:0;
+    height:72svh;
+    max-height:650px;
+  }
+  .mp-hero__media img{
+    object-position:61% 28%;
+  }
+  .mp-hero__media:after{
+    background:linear-gradient(0deg,rgba(39,36,35,.08),transparent 35%);
+  }
+  .mp-hero__note{
+    left:18px;
+    right:18px;
+    bottom:18px;
+    width:auto;
+    padding:17px 18px;
+  }
+  .mp-hero__note strong{font-size:19px}
+  .mp-hero__features{
+    order:3;
+    grid-template-columns:1fr 1fr;
+  }
+  .mp-hero-feature{
+    min-height:136px;
+    padding:22px 18px;
+    align-content:start;
+    grid-template-columns:28px 1fr;
+    gap:13px;
+  }
+  .mp-hero-feature+.mp-hero-feature{border-left:1px solid var(--line-color)}
+  .mp-hero-feature:nth-child(3){border-left:0}
+  .mp-hero-feature:nth-child(n+3){border-top:1px solid var(--line-color)}
+  .mp-hero-feature h3{font-size:10px;line-height:1.35}
+  .mp-hero-feature p{font-size:10px}
+
+  /* 02 SPECIALTIES — editorial list, image retains breathing room */
+  .mp-services__grid{gap:38px}
+  .mp-services__head .mp-lead{margin-top:20px}
+  .mp-services-list{margin-top:32px}
+  .mp-service{
+    grid-template-columns:34px 28px minmax(0,1fr) 18px;
+    gap:11px;
+    padding:20px 0;
+  }
+  .mp-service__index{font-size:17px}
+  .mp-service h3{font-size:13px}
+  .mp-service p{font-size:11px}
+  .mp-services__photo figure{
+    height:118vw;
+    max-height:570px;
+  }
+  .mp-services__photo img{object-position:center 30%}
+  .mp-services__quote{padding:24px}
+  .mp-services__quote p{font-size:22px}
+
+  /* 03 ABOUT — portrait never distorted */
+  .mp-about__grid{gap:46px}
+  .mp-about__visual{order:2}
+  .mp-about__visual figure{
+    height:118vw;
+    max-height:590px;
+  }
+  .mp-about__visual img{object-position:61% 28%}
+  .mp-about__stamp{
+    right:14px;
+    bottom:16px;
+    min-width:160px;
+    padding:18px 20px;
+  }
+  .mp-about__stamp b{font-size:28px}
+  .mp-manifesto article{
+    grid-template-columns:70px 1fr;
+    gap:14px;
+    padding:21px 0;
+  }
+  .mp-manifesto h3{font-size:20px}
+  .mp-manifesto p{font-size:12px}
+  .mp-about__quote{font-size:21px}
+
+  /* 04 TRAJECTORY — preserve approved desktop object photo */
+  .mp-trajectory__top{gap:34px}
+  .mp-trajectory__photo{
+    height:76vw;
+    min-height:290px;
+    max-height:430px;
+  }
+  .mp-trajectory__photo img{object-position:center}
+  .mp-credentials{
+    grid-template-columns:1fr;
+    margin-top:28px;
+  }
+  .mp-credential{padding:20px 0}
+  .mp-credential+.mp-credential{
+    border-left:0;
+    border-top:1px solid var(--line-color);
+  }
+  .mp-credential strong{font-size:18px}
+  .mp-trajectory__timeline{
+    grid-template-columns:1fr 1fr;
+    margin-top:30px;
+  }
+  .mp-milestone{padding:24px 18px 26px}
+  .mp-milestone+.mp-milestone{border-left:1px solid var(--line-color)}
+  .mp-milestone:nth-child(3){border-left:0}
+  .mp-milestone:nth-child(n+3){border-top:1px solid var(--line-color)}
+  .mp-milestone p{font-size:11px}
+  .mp-trajectory__closing{
+    align-items:flex-start;
+    flex-direction:column;
+    padding:22px;
+  }
+  .mp-trajectory__closing p{font-size:20px}
+
+  /* 05 PROCESS */
+  .mp-process__copy{padding:0 0 34px}
+  .mp-process__lead{margin:20px 0 28px}
+  .mp-principles{grid-template-columns:1fr 1fr}
+  .mp-principle{
+    padding:20px 14px 20px 0;
+  }
+  .mp-principle:nth-child(even){
+    padding-left:14px;
+    border-left:1px solid var(--line-color);
+  }
+  .mp-principle:nth-child(n+3){border-top:1px solid var(--line-color)}
+  .mp-process__media{
+    min-height:0;
+    height:112vw;
+    max-height:560px;
+  }
+  .mp-process__media img{object-position:center}
+  .mp-process__privacy{
+    left:18px;
+    right:18px;
+    bottom:18px;
+    width:auto;
+    padding:22px;
+  }
+  .mp-process__privacy h3{font-size:22px}
+  .mp-process__steps{
+    grid-template-columns:1fr 1fr;
+  }
+  .mp-process-step{padding:24px 17px}
+  .mp-process-step+.mp-process-step{border-left:1px solid var(--line-color)}
+  .mp-process-step:nth-child(3){border-left:0}
+  .mp-process-step:nth-child(n+3){border-top:1px solid var(--line-color)}
+
+  /* 06 TESTIMONIALS — image proportional, quote readable */
+  .mp-testimonials__copy{padding:34px 24px 0}
+  .mp-testimonials__lead{margin:20px 0 28px}
+  .mp-featured-quote{
+    padding-left:20px;
+  }
+  .mp-featured-quote blockquote{font-size:23px}
+  .mp-testimonials__small{
+    grid-template-columns:1fr;
+    margin:30px -24px 0;
+  }
+  .mp-testimonials__small article{padding:22px 24px}
+  .mp-testimonials__small article+article{
+    border-left:0;
+    border-top:1px solid var(--line-color);
+  }
+  .mp-testimonials__photo{
+    min-height:0;
+    height:112vw;
+    max-height:570px;
+  }
+  .mp-testimonials__photo img{object-position:center 34%}
+  .mp-trust{
+    grid-template-columns:repeat(3,1fr);
+  }
+  .mp-trust article{padding:22px 10px}
+  .mp-trust article+article{
+    border-left:1px solid var(--line-color);
+    border-top:0;
+  }
+  .mp-trust strong{font-size:16px}
+  .mp-trust small{font-size:7px}
+
+  /* 07 LIFE STAGES — key concept remains visible on mobile */
+  .mp-life__head{gap:20px}
+  .mp-life__visual{
+    margin-top:30px;
+    grid-template-columns:1fr;
+  }
+  .mp-life__photo{
+    height:72vw;
+    min-height:270px;
+    max-height:390px;
+  }
+  .mp-life__photo img{
+    object-fit:cover;
+    object-position:center 48%;
+  }
+  .mp-life__quote{padding:28px 24px}
+  .mp-life__quote b{font-size:48px}
+  .mp-life__quote p{font-size:22px;margin-top:18px}
+  .mp-life__stages{
+    grid-template-columns:1fr 1fr;
+  }
+  .mp-stage{
+    padding:24px 16px 27px;
+  }
+  .mp-stage+.mp-stage{border-left:1px solid var(--line-color)}
+  .mp-stage:nth-child(3){border-left:0}
+  .mp-stage:nth-child(n+3){border-top:1px solid var(--line-color)}
+  .mp-stage h3{font-size:19px}
+  .mp-stage p{font-size:9.5px}
+
+  /* 08 CONTACT — no overlays outside image, CTA always reachable */
+  .mp-contact__copy{padding:34px 24px 30px}
+  .mp-contact__lead{margin:20px 0 28px}
+  .mp-locations{grid-template-columns:1fr}
+  .mp-location{padding:20px 0}
+  .mp-location+.mp-location{
+    border-left:0;
+    border-top:1px solid var(--line-color);
+  }
+  .mp-contact__data{grid-template-columns:1fr}
+  .mp-contact__data div{padding:14px 0}
+  .mp-contact__data div+div{
+    border-left:0;
+    border-top:1px solid var(--line-color);
+  }
+  .mp-contact__visual{
+    min-height:0;
+    display:flex;
+    flex-direction:column;
+    overflow:visible;
+  }
+  .mp-contact__visual>img{
+    height:92vw;
+    min-height:350px;
+    max-height:500px;
+    object-fit:cover;
+    object-position:center;
+  }
+  .mp-appointment{
+    position:static;
+    transform:none;
+    width:auto;
+    margin:0;
+    padding:28px 24px;
+    background:var(--medical-mist);
+    border:0;
+    border-top:1px solid var(--line-color);
+    backdrop-filter:none;
+  }
+  .mp-appointment h3{font-size:25px}
+
+  .mp-footer{
+    padding:26px 22px 90px;
+    flex-direction:column;
+    gap:8px;
+    line-height:1.5;
+  }
+  .mp-whatsapp{
+    right:18px;
+    bottom:18px;
+    width:56px;
+    height:56px;
+  }
+}
+
+@media (max-width: 430px){
+  .mp-brand__name{font-size:10px}
+  .mp-brand__role{font-size:7px}
+  .mp-hero h1{font-size:clamp(44px,13vw,56px)}
+  .mp-hero__media{height:68svh}
+  .mp-hero__features{grid-template-columns:1fr}
+  .mp-hero-feature+.mp-hero-feature{
+    border-left:0;
+    border-top:1px solid var(--line-color);
+  }
+  .mp-service{grid-template-columns:30px 26px minmax(0,1fr)}
+  .mp-service__arrow{display:none}
+  .mp-trajectory__timeline,
+  .mp-process__steps,
+  .mp-life__stages{
+    grid-template-columns:1fr;
+  }
+  .mp-milestone+.mp-milestone,
+  .mp-process-step+.mp-process-step,
+  .mp-stage+.mp-stage{
+    border-left:0;
+    border-top:1px solid var(--line-color);
+  }
+  .mp-trust strong{font-size:14px}
+}
+
+
+/* =========================================================
+   V4.2 STRUCTURAL MOBILE SAFETY
+   This block intentionally lives LAST in the cascade.
+   ========================================================= */
+
+@media (max-width:760px){
+
+  html, body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  body, main,
+  .mp-header,
+  .mp-hero,
+  .mp-services,
+  .mp-about,
+  .mp-trajectory,
+  .mp-process,
+  .mp-testimonials,
+  .mp-life,
+  .mp-contact,
+  .mp-footer{
+    width:100%;
+    max-width:100%;
+  }
+
+  /* Critical: grid/flex children may otherwise refuse to shrink */
+  .mp-header > *,
+  .mp-hero > *,
+  .mp-shell > *,
+  .mp-services__grid > *,
+  .mp-about__grid > *,
+  .mp-trajectory__top > *,
+  .mp-process__top > *,
+  .mp-testimonials__hero > *,
+  .mp-life__head > *,
+  .mp-life__visual > *,
+  .mp-contact__grid > *,
+  .mp-hero-feature > *,
+  .mp-service > *,
+  .mp-manifesto article > *{
+    min-width:0 !important;
+    max-width:100%;
+  }
+
+  .mp-shell{
+    width:auto !important;
+    max-width:none !important;
+    margin-left:22px !important;
+    margin-right:22px !important;
+  }
+
+  /* No desktop columns survive mobile */
+  .mp-hero,
+  .mp-services__grid,
+  .mp-about__grid,
+  .mp-trajectory__top,
+  .mp-process__top,
+  .mp-testimonials__hero,
+  .mp-life__head,
+  .mp-life__visual,
+  .mp-contact__grid{
+    grid-template-columns:minmax(0,1fr) !important;
+  }
+
+  /* Text must wrap inside viewport */
+  .mp-hero h1,
+  .mp-services h2,
+  .mp-about h2,
+  .mp-trajectory h2,
+  .mp-process h2,
+  .mp-testimonials h2,
+  .mp-life h2,
+  .mp-contact h2,
+  .mp-featured-quote blockquote,
+  .mp-life__quote p,
+  .mp-trajectory__closing p{
+    width:auto !important;
+    max-width:100% !important;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+
+  /* Eliminate negative/offscreen desktop positioning */
+  .mp-about__stamp{
+    right:14px !important;
+    max-width:calc(100% - 28px);
+  }
+
+  .mp-process__privacy{
+    left:18px !important;
+    right:18px !important;
+    width:auto !important;
+  }
+
+  .mp-appointment{
+    left:auto !important;
+    right:auto !important;
+    width:auto !important;
+    max-width:none !important;
+    transform:none !important;
+  }
+
+  /* Media always belongs to viewport */
+  .mp-hero__media,
+  .mp-services__photo,
+  .mp-services__photo figure,
+  .mp-about__visual,
+  .mp-about__visual figure,
+  .mp-trajectory__photo,
+  .mp-process__media,
+  .mp-testimonials__photo,
+  .mp-life__photo,
+  .mp-contact__visual{
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+  }
+
+  .mp-hero__media img,
+  .mp-services__photo img,
+  .mp-about__visual img,
+  .mp-trajectory__photo img,
+  .mp-process__media img,
+  .mp-testimonials__photo img,
+  .mp-life__photo img,
+  .mp-contact__visual > img{
+    display:block;
+    width:100% !important;
+    max-width:100% !important;
+    min-width:0 !important;
+    height:100% !important;
+    object-fit:cover !important;
+  }
+
+  /* Grids that intentionally remain 2-col at regular phones */
+  .mp-hero__features,
+  .mp-trajectory__timeline,
+  .mp-process__steps,
+  .mp-life__stages{
+    width:100%;
+    min-width:0;
+  }
+
+  .mp-credentials,
+  .mp-locations,
+  .mp-contact__data{
+    width:100%;
+    min-width:0;
+  }
+
+  /* Long CTA/content cannot create horizontal scrolling */
+  .mp-btn,
+  .mp-hero__actions,
+  .mp-trajectory__closing,
+  .mp-contact__data,
+  .mp-credentials{
+    max-width:100%;
+  }
+
+  .mp-btn{
+    white-space:normal;
+    text-align:center;
+  }
+
+  .mp-whatsapp{
+    max-width:none;
+  }
+}
+
+@media (max-width:430px){
+  .mp-shell{
+    margin-left:18px !important;
+    margin-right:18px !important;
+  }
+
+  .mp-hero__copy{
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  .mp-hero__features,
+  .mp-trajectory__timeline,
+  .mp-process__steps,
+  .mp-life__stages,
+  .mp-trust{
+    grid-template-columns:minmax(0,1fr) !important;
+  }
+
+  .mp-hero-feature,
+  .mp-milestone,
+  .mp-process-step,
+  .mp-stage,
+  .mp-trust article{
+    border-left:0 !important;
+  }
+}

@@ -1,0 +1,1 @@
+document.querySelectorAll(".mp-faq details").forEach(d=>d.addEventListener("toggle",()=>{if(d.open)document.querySelectorAll(".mp-faq details").forEach(o=>{if(o!==d)o.open=false})}));

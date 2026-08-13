@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="i-person" viewBox="0 0 48 48"><circle cx="24" cy="15" r="6"/><path d="M13 40c2-9 7-14 11-14s9 5 11 14"/></symbol>
+<symbol id="i-shield" viewBox="0 0 48 48"><path d="M24 7 38 13v10c0 9-5 14-14 18-9-4-14-9-14-18V13L24 7Z"/><path d="m19 24 3 3 7-8"/></symbol>
+<symbol id="i-heart" viewBox="0 0 48 48"><path d="M24 38c-8-5-13-10-13-17a8 8 0 0 1 13-6 8 8 0 0 1 13 6c0 7-5 12-13 17Z"/></symbol>
+<symbol id="i-female" viewBox="0 0 48 48"><circle cx="24" cy="18" r="9"/><path d="M24 27v13M18 34h12"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 48 48"><rect x="9" y="12" width="30" height="27" rx="2"/><path d="M16 8v8M32 8v8M9 20h30M16 27h4M24 27h4M16 33h4"/></symbol>
+<symbol id="i-location" viewBox="0 0 48 48"><path d="M24 41s12-11 12-21a12 12 0 1 0-24 0c0 10 12 21 12 21Z"/><circle cx="24" cy="20" r="3.5"/></symbol>
+<symbol id="i-dialog" viewBox="0 0 48 48"><path d="M9 12h30v22H24l-7 6v-6H9Z"/><path d="M16 22h4M24 22h4M32 22h1"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 48 48"><path d="M24 40V23"/><path d="M24 28c-8 0-12-5-12-12 7 0 12 4 12 12ZM24 24c8 0 12-5 12-12-7 0-12 4-12 12Z"/></symbol>
+<symbol id="i-pregnancy" viewBox="0 0 48 48"><circle cx="24" cy="11" r="5"/><path d="M21 17c-5 5-7 12-6 22h18c2-10-1-18-8-22"/><path d="M24 25c5 0 8 3 8 8"/></symbol>
+<symbol id="i-book" viewBox="0 0 48 48"><path d="M9 10h13c4 0 5 2 5 5v24c0-3-2-5-5-5H9Z"/><path d="M39 10H26c-4 0-5 2-5 5v24c0-3 2-5 5-5h13Z"/></symbol>
+<symbol id="i-cap" viewBox="0 0 48 48"><path d="m7 18 17-8 17 8-17 8Z"/><path d="M14 22v9c6 5 14 5 20 0v-9M41 18v11"/></symbol>
+<symbol id="i-lock" viewBox="0 0 48 48"><path d="M13 22h22v18H13Z"/><path d="M18 22v-6a6 6 0 0 1 12 0v6"/></symbol>
+</svg>

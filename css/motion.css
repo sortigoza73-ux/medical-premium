@@ -1,0 +1,6 @@
+
+.mp-reveal{opacity:0;transform:translateY(12px);transition:opacity var(--motion-slow) var(--ease-medical),transform var(--motion-slow) var(--ease-medical)}
+.mp-reveal.is-visible{opacity:1;transform:none}
+.mp-photo-zoom img{transform:scale(1.015);transition:transform 1200ms var(--ease-medical)}
+.mp-photo-zoom.is-visible img{transform:scale(1)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mp-reveal{opacity:1;transform:none;transition:none}.mp-photo-zoom img{transform:none;transition:none}}

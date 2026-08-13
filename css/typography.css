@@ -1,0 +1,7 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap");
+html{font-size:16px}
+body{font-family:var(--font-body);color:var(--medical-ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.mp-display{font-family:var(--font-display);font-weight:400}
+.mp-eyebrow{font-size:11px;line-height:1.3;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--medical-wine)}
+.mp-lead{font-size:17px;line-height:1.72;color:var(--medical-gray-700)}

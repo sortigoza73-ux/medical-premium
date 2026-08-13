@@ -1,0 +1,1 @@
+document.querySelector(".mp-whatsapp")?.addEventListener("click",e=>{e.preventDefault();document.querySelector("#contacto")?.scrollIntoView({behavior:"smooth"})});
