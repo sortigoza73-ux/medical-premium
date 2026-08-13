@@ -1,0 +1,17 @@
+MEDICAL PREMIUM V4.1 MOBILE — QA
+Desktop layout CSS modified: NO
+HTML structural rewrite: NO (only cache version + menu aria state)
+Mobile art direction: YES
+Tablet breakpoint: 1150px
+Mobile breakpoint: 760px
+Small-phone breakpoint: 430px
+Mobile navigation opens/closes: YES
+Hero image uses object-fit cover and mobile object-position: YES
+All section images have explicit mobile aspect/height rules: YES
+Life-stage image preserved as a single clean photograph: YES
+Trajectory desktop object photo preserved: YES
+Contact CTA removed from image overlay on mobile: YES
+2-column editorial grids retained where useful: YES
+1-column fallback on <=430px: YES
+prefers-reduced-motion retained from motion.css: YES
+Missing required files: NONE

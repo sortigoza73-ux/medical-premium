@@ -1,0 +1,31 @@
+MEDICAL PREMIUM V4.2 — RESPONSIVE STRUCTURAL FIX
+
+ROOT CAUSE FOUND
+Previous architecture imported responsive.css at the TOP of layout.css.
+That means responsive rules were parsed BEFORE later desktop rules.
+When specificity was equal, the desktop rules won the cascade and reintroduced
+desktop widths/columns on mobile.
+
+FIX
+- Removed all @import statements from layout.css.
+- CSS now loads as separate files in explicit order:
+  1 tokens
+  2 typography
+  3 components
+  4 layout (desktop/base)
+  5 motion
+  6 responsive (LAST — therefore it wins)
+- Added min-width:0 to grid/flex children on mobile.
+- Added width/max-width safety to wrappers and media.
+- Forced mobile master grids to one minmax(0,1fr) column.
+- Removed mobile off-screen transforms / absolute widths.
+- Added runtime horizontal-overflow audit in navigation.js.
+
+CSS link order correct: True
+@import left in layout.css: False
+CSS parser errors: NONE
+
+Acceptance criterion:
+At <=760px the document must satisfy:
+document.documentElement.scrollWidth === document.documentElement.clientWidth
+(except browser rounding of <=2px).
