@@ -1,6 +1,6 @@
 /* =========================================================
-   MEDICAL PREMIUM V5
-   RESPONSIVE SYSTEM — CLEAN
+   MEDICAL PREMIUM V6
+   RESPONSIVE SYSTEM — CLEAN / STABLE
    ---------------------------------------------------------
    Breakpoints:
    1150px = tablet / compact desktop
@@ -9,105 +9,49 @@
 
    Regla:
    Desktop vive en layout.css.
-   Este archivo solamente adapta el sistema.
-   ========================================================= */
-
-
-/* =========================================================
-   01 — TABLET / COMPACT DESKTOP
+   Este archivo adapta el sistema sin duplicar reglas.
    ========================================================= */
 
 @media (max-width: 1150px) {
-
-  html {
-    scroll-padding-top: 76px;
-  }
-
-  /* Header */
+  html { scroll-padding-top: 76px; }
 
   .mp-header {
     height: 76px;
-    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-columns: minmax(0,1fr) auto auto;
     gap: 14px;
   }
-
-  .mp-header > .mp-btn {
-    height: 46px;
-    padding-inline: 18px;
-  }
-
+  .mp-header > .mp-btn { height: 46px; padding-inline: 18px; }
   .mp-nav {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
+    top: 100%; left: 0; right: 0;
     padding: 20px var(--page-x) 24px;
-    background: rgba(247, 243, 240, .985);
+    background: rgba(247,243,240,.985);
     border-bottom: 1px solid var(--line-color);
-    box-shadow: 0 18px 40px rgba(39, 36, 35, .07);
+    box-shadow: 0 18px 40px rgba(39,36,35,.07);
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
   }
-
-  .mp-nav.is-open {
-    display: flex;
-  }
-
+  .mp-nav.is-open { display: flex; }
   .mp-nav a {
     width: 100%;
     padding: 14px 0;
     border-bottom: 1px solid var(--line-color);
     font-size: 11px;
   }
-
-  .mp-nav a:last-child {
-    border-bottom: 0;
-  }
-
-  .mp-nav a.is-active::after {
-    display: none;
-  }
-
-  .mp-menu {
-    display: block;
-    border: 0;
-    background: transparent;
-    padding: 8px;
-    cursor: pointer;
-  }
-
-  .mp-menu span {
-    display: block;
-    width: 24px;
-    height: 1px;
-    margin: 6px 0;
-    background: var(--medical-ink);
-  }
-
-
-  /* Hero */
+  .mp-nav a:last-child { border-bottom: 0; }
+  .mp-nav a.is-active::after { display: none; }
+  .mp-menu { display: block; border: 0; background: transparent; padding: 8px; cursor: pointer; }
+  .mp-menu span { display: block; width: 24px; height: 1px; margin: 6px 0; background: var(--medical-ink); }
 
   .mp-hero {
     min-height: auto;
-    grid-template-columns: minmax(390px, .88fr) minmax(0, 1.12fr);
+    grid-template-columns: minmax(390px,.88fr) minmax(0,1.12fr);
   }
-
-  .mp-hero__copy {
-    padding: 72px 44px 48px;
-  }
-
-  .mp-hero__media {
-    min-height: 620px;
-  }
-
-  .mp-hero__features {
-    grid-template-columns: 1fr 1fr;
-  }
-
-
-  /* Main layouts */
+  .mp-hero__copy { padding: 72px 44px 48px; }
+  .mp-hero__media { min-height: 620px; }
+  .mp-hero__features { grid-template-columns: 1fr 1fr; }
 
   .mp-services__grid,
   .mp-about__grid,
@@ -115,124 +59,44 @@
   .mp-process__top,
   .mp-testimonials__hero,
   .mp-life__head,
-  .mp-contact__grid {
-    grid-template-columns: 1fr;
-  }
+  .mp-contact__grid { grid-template-columns: 1fr; }
 
   .mp-services__grid,
-  .mp-about__grid {
-    gap: 48px;
-  }
-
-  .mp-services__photo {
-    position: static;
-  }
-
-  .mp-services__photo figure {
-    height: 560px;
-  }
-
-  .mp-about__visual {
-    max-width: 760px;
-  }
-
-  .mp-about__visual figure {
-    height: 600px;
-  }
-
-  .mp-trajectory__top {
-    gap: 42px;
-  }
-
-  .mp-process__top {
-    gap: 0;
-  }
-
-  .mp-process__copy {
-    padding-bottom: 44px;
-  }
-
+  .mp-about__grid { gap: 48px; }
+  .mp-services__photo { position: static; }
+  .mp-services__photo figure { height: 560px; }
+  .mp-about__visual { max-width: 760px; }
+  .mp-about__visual figure { height: 600px; }
+  .mp-trajectory__top { gap: 42px; }
+  .mp-process__top { gap: 0; }
+  .mp-process__copy { padding-bottom: 44px; }
   .mp-process__media,
-  .mp-testimonials__photo {
-    min-height: 560px;
-  }
-
-  .mp-trust {
-    margin-left: 0;
-  }
-
-  .mp-life__head {
-    gap: 24px;
-  }
-
-  .mp-contact__visual {
-    min-height: 620px;
-  }
+  .mp-testimonials__photo { min-height: 560px; }
+  .mp-trust { margin-left: 0; }
+  .mp-life__head { gap: 24px; }
+  .mp-contact__visual { min-height: 620px; }
 }
 
-
-/* =========================================================
-   02 — MOBILE
-   ========================================================= */
-
 @media (max-width: 760px) {
-
   :root {
     --page-x: 22px;
-    --section-y-mobile: 72px;
+    --section-y-mobile: 68px;
   }
 
-  html {
-    scroll-padding-top: 104px;
-    font-size: 16px;
-  }
+  html { scroll-padding-top: 104px; font-size: 16px; }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  body { background: var(--medical-paper); }
 
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
+  body, main, .mp-header, .mp-hero, .mp-services, .mp-about,
+  .mp-trajectory, .mp-process, .mp-testimonials, .mp-life,
+  .mp-contact, .mp-footer { width: 100%; max-width: 100%; }
 
-  body {
-    background: var(--medical-paper);
-  }
-
-
-  /* -------------------------------------------------------
-     Structural safety
-     ------------------------------------------------------- */
-
-  body,
-  main,
-  .mp-header,
-  .mp-hero,
-  .mp-services,
-  .mp-about,
-  .mp-trajectory,
-  .mp-process,
-  .mp-testimonials,
-  .mp-life,
-  .mp-contact,
-  .mp-footer {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .mp-header > *,
-  .mp-hero > *,
-  .mp-shell > *,
-  .mp-services__grid > *,
-  .mp-about__grid > *,
-  .mp-trajectory__top > *,
-  .mp-process__top > *,
-  .mp-testimonials__hero > *,
-  .mp-life__head > *,
-  .mp-life__visual > *,
-  .mp-contact__grid > *,
-  .mp-hero-feature > *,
-  .mp-service > *,
-  .mp-manifesto article > * {
+  .mp-header > *, .mp-hero > *, .mp-shell > *,
+  .mp-services__grid > *, .mp-about__grid > *,
+  .mp-trajectory__top > *, .mp-process__top > *,
+  .mp-testimonials__hero > *, .mp-life__head > *,
+  .mp-life__visual > *, .mp-contact__grid > *,
+  .mp-hero-feature > *, .mp-service > *, .mp-manifesto article > * {
     min-width: 0;
     max-width: 100%;
   }
@@ -244,44 +108,30 @@
     margin-right: 22px;
   }
 
-  .mp-services__grid,
-  .mp-about__grid,
-  .mp-trajectory__top,
-  .mp-process__top,
-  .mp-testimonials__hero,
-  .mp-life__head,
-  .mp-life__visual,
-  .mp-contact__grid {
-    grid-template-columns: minmax(0, 1fr);
+  .mp-services__grid, .mp-about__grid, .mp-trajectory__top,
+  .mp-process__top, .mp-testimonials__hero, .mp-life__head,
+  .mp-life__visual, .mp-contact__grid {
+    grid-template-columns: minmax(0,1fr);
   }
 
-
-  /* -------------------------------------------------------
-     Header
-     ------------------------------------------------------- */
-
+  /* Header */
   .mp-header {
     min-height: 104px;
     height: auto;
     padding: 18px 22px;
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0,1fr) auto;
     gap: 8px;
     align-items: center;
   }
-
-  .mp-header > .mp-btn {
-    display: none;
-  }
-
+  .mp-header > .mp-btn { display: none; }
   .mp-brand {
     display: grid;
-    grid-template-columns: 78px 1px minmax(0, 1fr);
+    grid-template-columns: 78px 1px minmax(0,1fr);
     column-gap: 18px;
     align-items: center;
     width: 100%;
     min-width: 0;
   }
-
   .mp-brand__mark {
     font-family: var(--font-display);
     font-size: 58px;
@@ -289,14 +139,7 @@
     letter-spacing: -.06em;
     color: var(--medical-wine);
   }
-
-  .mp-brand__divider {
-    width: 1px;
-    height: 72px;
-    background: var(--medical-wine);
-    opacity: .7;
-  }
-
+  .mp-brand__divider { width: 1px; height: 72px; background: var(--medical-wine); opacity: .7; }
   .mp-brand__name {
     display: block;
     font-family: var(--font-display);
@@ -304,691 +147,259 @@
     line-height: 1.08;
     font-weight: 400;
     letter-spacing: .015em;
-    text-transform: none;
     color: var(--medical-ink);
     white-space: normal;
   }
-
   .mp-brand__role {
     display: block;
     margin-top: 8px;
     font-family: var(--font-body);
     font-size: 11px;
     line-height: 1.45;
-    font-weight: 400;
-    letter-spacing: 0;
     color: var(--medical-gray-700);
     white-space: normal;
   }
+  .mp-nav { padding: 14px 22px 20px; }
+  .mp-menu { justify-self: end; margin-left: 14px; padding: 10px 0 10px 10px; }
+  .mp-menu span { width: 26px; }
 
-  .mp-nav {
-    padding: 14px 22px 20px;
-  }
-
-  .mp-menu {
-    justify-self: end;
-    margin-left: 14px;
-    padding: 10px 0 10px 10px;
-  }
-
-  .mp-menu span {
-    width: 26px;
-  }
-
-
-  /* -------------------------------------------------------
-     Global mobile typography + spacing
-     ------------------------------------------------------- */
-
-  .mp-services,
-  .mp-about,
-  .mp-trajectory,
-  .mp-process,
-  .mp-testimonials,
-  .mp-life,
-  .mp-contact {
+  /* Global typography */
+  .mp-services, .mp-about, .mp-trajectory, .mp-process,
+  .mp-testimonials, .mp-life, .mp-contact {
     padding: var(--section-y-mobile) 0;
   }
+  .mp-section-id { margin-bottom: 20px; gap: 12px; }
+  .mp-section-id__line { width: 38px; }
+  .mp-section-id__label { font-size: 11px; line-height: 1.3; letter-spacing: .11em; }
+  .mp-number { font-size: 20px; line-height: 1; flex: 0 0 auto; }
+  .mp-lead { font-size: 17px; line-height: 1.62; }
 
-  .mp-section-id {
-    margin-bottom: 20px;
-    gap: 10px;
+  .mp-services__head h2, .mp-about h2, .mp-trajectory h2,
+  .mp-process h2, .mp-testimonials h2, .mp-life h2, .mp-contact h2 {
+    font-size: clamp(38px,9.7vw,48px);
+    line-height: 1.04;
+    letter-spacing: -.025em;
   }
 
-  .mp-section-id__line {
-    width: 42px;
-  }
-
-  .mp-section-id__label {
-    font-size: 10px;
-  }
-
-  .mp-number {
-    font-size: 21px;
-  }
-
-  .mp-lead {
-    font-size: 16px;
-    line-height: 1.65;
-  }
-
-  .mp-services__head h2,
-  .mp-about h2,
-  .mp-trajectory h2,
-  .mp-process h2,
-  .mp-testimonials h2,
-  .mp-life h2,
-  .mp-contact h2 {
-    font-size: clamp(43px, 12vw, 58px);
-    line-height: 1.02;
-  }
-
-
-  /* -------------------------------------------------------
-     01 — Hero
-     ------------------------------------------------------- */
-
-  .mp-hero {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
-  }
-
-  .mp-hero__copy {
-    padding: 58px 22px 42px;
-  }
-
-  .mp-hero__eyebrow {
-    margin-bottom: 20px;
-    font-size: 10px;
-  }
-
+  /* Hero */
+  .mp-hero { display: flex; flex-direction: column; min-height: auto; }
+  .mp-hero__copy { padding: 56px 22px 40px; }
+  .mp-hero__eyebrow { margin-bottom: 20px; font-size: 10px; }
   .mp-hero h1 {
     max-width: none;
-    font-size: clamp(48px, 13.2vw, 62px);
+    font-size: clamp(46px,12.6vw,60px);
     line-height: .99;
     letter-spacing: -.035em;
   }
-
-  .mp-hero__rule {
-    margin: 24px 0 22px;
-  }
-
-  .mp-hero__lead {
-    margin-bottom: 28px;
-  }
-
-  .mp-hero__actions {
-    align-items: flex-start;
-    gap: 22px;
-    flex-wrap: wrap;
-  }
-
-  .mp-btn {
-    height: 50px;
-    padding: 0 20px;
-    white-space: normal;
-    text-align: center;
-  }
+  .mp-hero__rule { margin: 24px 0 22px; }
+  .mp-hero__lead { margin-bottom: 28px; }
+  .mp-hero__actions { align-items: flex-start; gap: 20px; flex-wrap: wrap; }
+  .mp-btn { height: 50px; padding: 0 20px; white-space: normal; text-align: center; }
 
   .mp-hero__media {
-  order: 2;
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  max-height: none;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-}
-
-.mp-hero__media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-
+    order: 2;
+    position: relative;
+    width: calc(100% - 32px);
+    height: 520px;
+    min-height: 0;
+    max-height: none;
+    margin: 16px auto 0;
+    overflow: hidden;
   }
-
-  .mp-hero__media::after {
-    background: linear-gradient(
-      0deg,
-      rgba(39, 36, 35, .08),
-      transparent 35%
-    );
-  }
-
-  .mp-hero__note {
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
-    width: auto;
-    padding: 17px 18px;
-  }
-
-  .mp-hero__note strong {
-    font-size: 19px;
-  }
-
-  .mp-hero__features {
-    order: 3;
-    grid-template-columns: 1fr 1fr;
+  .mp-hero__media img {
+    display: block;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
   }
-
+  .mp-hero__media::after {
+    background: linear-gradient(0deg,rgba(39,36,35,.08),transparent 35%);
+  }
+  .mp-hero__note { left: 24px; right: 0; bottom: 20px; width: auto; padding: 17px 18px; }
+  .mp-hero__note strong { font-size: 19px; }
+  .mp-hero__features { order: 3; grid-template-columns: 1fr 1fr; width: 100%; }
   .mp-hero-feature {
-    min-height: 136px;
-    padding: 22px 18px;
+    min-height: 126px;
+    padding: 20px 16px;
     align-content: start;
-    grid-template-columns: 28px 1fr;
-    gap: 13px;
+    grid-template-columns: 28px minmax(0,1fr);
+    gap: 12px;
   }
+  .mp-hero-feature + .mp-hero-feature { border-left: 1px solid var(--line-color); }
+  .mp-hero-feature:nth-child(3) { border-left: 0; }
+  .mp-hero-feature:nth-child(n+3) { border-top: 1px solid var(--line-color); }
+  .mp-hero-feature h3 { font-size: 12px; line-height: 1.35; }
+  .mp-hero-feature p { font-size: 13px; line-height: 1.5; }
 
-  .mp-hero-feature + .mp-hero-feature {
-    border-left: 1px solid var(--line-color);
-  }
-
-  .mp-hero-feature:nth-child(3) {
-    border-left: 0;
-  }
-
-  .mp-hero-feature:nth-child(n+3) {
-    border-top: 1px solid var(--line-color);
-  }
-
-  .mp-hero-feature h3 {
-    font-size: 11px;
-    line-height: 1.35;
-  }
-
-  .mp-hero-feature p {
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-
-  /* -------------------------------------------------------
-     02 — Areas de atención
-     ------------------------------------------------------- */
-
-  .mp-services__grid {
-    gap: 38px;
-  }
-
-  .mp-services__head .mp-lead {
-    margin-top: 20px;
-  }
-
-  .mp-services-list {
-    margin-top: 38px;
-  }
-
+  /* Áreas de atención */
+  .mp-services__grid { gap: 36px; }
+  .mp-services__head .mp-lead { margin-top: 20px; }
+  .mp-services-list { margin-top: 34px; }
   .mp-service {
-    grid-template-columns: 38px 34px minmax(0, 1fr) 20px;
-    column-gap: 14px;
-    align-items: center;
+    grid-template-columns: 52px minmax(0,1fr);
+    column-gap: 20px;
+    align-items: start;
     padding: 26px 0;
   }
+  .mp-service__index, .mp-service__arrow { display: none; }
+  .mp-service .mp-icon { width: 40px; height: 40px; flex-basis: 40px; margin-top: 2px; }
+  .mp-service h3 { margin: 0 0 7px; font-size: 18px; line-height: 1.28; font-weight: 600; }
+  .mp-service p { margin: 0; max-width: 100%; font-size: 15px; line-height: 1.58; }
+  .mp-services__photo { position: static; width: 100%; }
+  .mp-services__photo figure { width: 100%; height: 112vw; max-height: 560px; }
+  .mp-services__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+  .mp-services__quote { padding: 24px; }
+  .mp-services__quote p { font-size: 22px; }
 
-  .mp-service__index {
-    font-size: 22px;
-  }
-
-  .mp-service .mp-icon {
-    width: 30px;
-    height: 30px;
-    flex-basis: 30px;
-  }
-
-  .mp-service h3 {
-    margin: 0 0 7px;
-    font-size: 17px;
-    line-height: 1.25;
-    font-weight: 600;
-  }
-
-  .mp-service p {
-    margin: 0;
-    max-width: 100%;
-    font-size: 15px;
-    line-height: 1.55;
-  }
-
-  .mp-service__arrow {
-    display: block;
-    font-size: 20px;
-  }
-
-  .mp-services__photo {
-    position: static;
-    width: 100%;
-  }
-
-  .mp-services__photo figure {
-    width: 100%;
-    height: 118vw;
-    max-height: 570px;
-  }
-
-  .mp-services__photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
-  }
-
-  .mp-services__quote {
-    padding: 24px;
-  }
-
-  .mp-services__quote p {
-    font-size: 22px;
-  }
-
-
-  /* -------------------------------------------------------
-     03 — Sobre mí
-     ------------------------------------------------------- */
-
-  .mp-about__grid {
-    gap: 46px;
-  }
-
-  .mp-about__visual {
-    order: 2;
-    width: 100%;
-  }
-
-  .mp-about__visual figure {
-    width: 100%;
-    height: 118vw;
-    max-height: 590px;
-  }
-
-  .mp-about__visual img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 61% 28%;
-  }
-
-  .mp-about__stamp {
-    right: 14px;
-    bottom: 16px;
-    min-width: 160px;
-    max-width: calc(100% - 28px);
-    padding: 18px 20px;
-  }
-
-  .mp-about__stamp b {
-    font-size: 28px;
-  }
-
+  /* Sobre mí */
+  .mp-about__grid { gap: 42px; }
+  .mp-about__visual { order: 2; width: 100%; }
+  .mp-about__visual figure { width: 100%; height: 112vw; max-height: 580px; }
+  .mp-about__visual img { width: 100%; height: 100%; object-fit: cover; object-position: 61% 28%; }
+  .mp-about__stamp { right: 14px; bottom: 16px; min-width: 160px; max-width: calc(100% - 28px); padding: 18px 20px; }
+  .mp-about__stamp b { font-size: 28px; }
   .mp-manifesto article {
-    grid-template-columns: 70px minmax(0, 1fr);
-    gap: 14px;
-    padding: 21px 0;
+    grid-template-columns: 58px minmax(0,1fr);
+    gap: 20px;
+    padding: 22px 0;
   }
+  .mp-manifesto small { font-size: 11px; line-height: 1.3; }
+  .mp-manifesto h3 { margin-bottom: 7px; font-size: 19px; line-height: 1.25; }
+  .mp-manifesto p { font-size: 15px; line-height: 1.6; }
+  .mp-about__quote { font-size: 21px; }
 
-  .mp-manifesto h3 {
-    font-size: 20px;
-  }
-
-  .mp-manifesto p {
-    font-size: 13px;
-    line-height: 1.6;
-  }
-
-  .mp-about__quote {
-    font-size: 21px;
-  }
-
-
-  /* -------------------------------------------------------
-     04 — Trayectoria
-     ------------------------------------------------------- */
-
-  .mp-trajectory__top {
-    gap: 34px;
-  }
-
+  /* Trayectoria */
+  .mp-trajectory__top { gap: 32px; }
   .mp-trajectory__photo {
-    width: 100%;
-    height: 76vw;
-    min-height: 290px;
-    max-height: 430px;
+    width: calc(100% - 48px);
+    max-width: 520px;
+    height: auto;
+    min-height: 0;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
   }
-
-  .mp-trajectory__photo img {
+  .mp-trajectory__photo > img {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
   }
+  .mp-credentials { grid-template-columns: 1fr; margin-top: 28px; width: 100%; }
+  .mp-credential { padding: 20px 0; }
+  .mp-credential + .mp-credential { border-left: 0; border-top: 1px solid var(--line-color); }
+  .mp-credential span { font-size: 11px; }
+  .mp-credential strong { font-size: 19px; }
+  .mp-trajectory__timeline { grid-template-columns: 1fr 1fr; margin-top: 30px; width: 100%; }
+  .mp-milestone { padding: 23px 18px 25px; }
+  .mp-milestone + .mp-milestone { border-left: 1px solid var(--line-color); }
+  .mp-milestone:nth-child(3) { border-left: 0; }
+  .mp-milestone:nth-child(n+3) { border-top: 1px solid var(--line-color); }
+  .mp-milestone b { font-size: 24px; }
+  .mp-milestone h3 { font-size: 14px; line-height: 1.4; }
+  .mp-milestone p { font-size: 14px; line-height: 1.58; }
+  .mp-trajectory__closing { max-width: 100%; align-items: flex-start; flex-direction: column; padding: 22px; }
+  .mp-trajectory__closing p { max-width: 100%; font-size: 20px; }
 
-  .mp-credentials {
-    grid-template-columns: 1fr;
-    margin-top: 28px;
-    width: 100%;
-  }
-
-  .mp-credential {
-    padding: 20px 0;
-  }
-
-  .mp-credential + .mp-credential {
-    border-left: 0;
-    border-top: 1px solid var(--line-color);
-  }
-
-  .mp-credential strong {
-    font-size: 18px;
-  }
-
-  .mp-trajectory__timeline {
-    grid-template-columns: 1fr 1fr;
-    margin-top: 30px;
-    width: 100%;
-  }
-
-  .mp-milestone {
-    padding: 24px 18px 26px;
-  }
-
-  .mp-milestone + .mp-milestone {
-    border-left: 1px solid var(--line-color);
-  }
-
-  .mp-milestone:nth-child(3) {
-    border-left: 0;
-  }
-
-  .mp-milestone:nth-child(n+3) {
-    border-top: 1px solid var(--line-color);
-  }
-
-  .mp-milestone p {
-    font-size: 12px;
-    line-height: 1.55;
-  }
-
-  .mp-trajectory__closing {
-    max-width: 100%;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 22px;
-  }
-
-  .mp-trajectory__closing p {
-    max-width: 100%;
-    font-size: 20px;
-    overflow-wrap: anywhere;
-  }
-
-
-  /* -------------------------------------------------------
-     05 — Cómo trabajamos
-     ------------------------------------------------------- */
-
-  .mp-process__copy {
-    padding: 0 0 34px;
-  }
-
-  .mp-process__lead {
-    margin: 20px 0 28px;
-  }
-
-  .mp-principles {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .mp-principle {
-    padding: 20px 14px 20px 0;
-  }
-
-  .mp-principle:nth-child(even) {
-    padding-left: 14px;
-    border-left: 1px solid var(--line-color);
-  }
-
-  .mp-principle:nth-child(n+3) {
-    border-top: 1px solid var(--line-color);
-  }
+  /* Cómo trabajamos */
+  .mp-process__copy { padding: 0 0 32px; }
+  .mp-process__lead { margin: 20px 0 28px; }
+  .mp-principles { grid-template-columns: 1fr; }
+  .mp-principle { padding: 22px 0; }
+  .mp-principle:nth-child(even) { padding-left: 0; border-left: 0; }
+  .mp-principle:nth-child(n+2) { border-top: 1px solid var(--line-color); }
+  .mp-principle h3 { margin: 10px 0 7px; font-size: 15px; line-height: 1.4; }
+  .mp-principle p { font-size: 15px; line-height: 1.6; }
 
   .mp-process__media {
-    width: 100%;
+    position: relative;
+    width: calc(100% - 48px);
+    max-width: 520px;
     min-height: 0;
-    height: 112vw;
-    max-height: 560px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible;
   }
-
-  .mp-process__media img {
+  .mp-process__media > img {
+    display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+    margin: 0;
     object-fit: cover;
     object-position: center;
   }
-
   .mp-process__privacy {
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
-    width: auto;
-    padding: 22px;
-  }
-
-  .mp-process__privacy h3 {
-    font-size: 22px;
-  }
-
-  .mp-process__steps {
-    grid-template-columns: 1fr 1fr;
+    position: relative;
+    inset: auto;
     width: 100%;
-  }
-
-  .mp-process-step {
-    padding: 24px 17px;
-  }
-
-  .mp-process-step + .mp-process-step {
-    border-left: 1px solid var(--line-color);
-  }
-
-  .mp-process-step:nth-child(3) {
-    border-left: 0;
-  }
-
-  .mp-process-step:nth-child(n+3) {
-    border-top: 1px solid var(--line-color);
-  }
-
-
-  /* -------------------------------------------------------
-     06 — Testimonios
-     ------------------------------------------------------- */
-
-  .mp-testimonials__copy {
-    padding: 34px 24px 0;
-  }
-
-  .mp-testimonials__lead {
-    margin: 20px 0 28px;
-  }
-
-  .mp-featured-quote {
-    padding-left: 20px;
-  }
-
-  .mp-featured-quote blockquote {
-    max-width: 100%;
-    font-size: 23px;
-    overflow-wrap: anywhere;
-  }
-
-  .mp-testimonials__small {
-    grid-template-columns: 1fr;
-    margin: 30px -24px 0;
-  }
-
-  .mp-testimonials__small article {
-    padding: 22px 24px;
-  }
-
-  .mp-testimonials__small article + article {
-    border-left: 0;
-    border-top: 1px solid var(--line-color);
-  }
-
-  .mp-testimonials__photo {
-    width: 100%;
+    max-width: none;
     min-height: 0;
-    height: 112vw;
-    max-height: 570px;
+    margin: 0;
+    padding: 28px 26px;
+    box-sizing: border-box;
+    background: var(--medical-wine);
+    color: #fff;
   }
+  .mp-process__privacy .mp-icon { width: 26px; height: 26px; margin-bottom: 16px; }
+  .mp-process__privacy h3 { margin: 0 0 10px; font-size: 23px; line-height: 1.18; color: #fff; }
+  .mp-process__privacy p { margin: 0; font-size: 16px; line-height: 1.55; color: rgba(255,255,255,.88); }
+  .mp-process__steps { grid-template-columns: 1fr 1fr; width: 100%; }
+  .mp-process-step { padding: 22px 16px; }
+  .mp-process-step + .mp-process-step { border-left: 1px solid var(--line-color); }
+  .mp-process-step:nth-child(3) { border-left: 0; }
+  .mp-process-step:nth-child(n+3) { border-top: 1px solid var(--line-color); }
+  .mp-process-step b { width: 44px; height: 44px; font-size: 17px; }
+  .mp-process-step h3 { font-size: 13px; line-height: 1.4; }
+  .mp-process-step p { font-size: 14px; line-height: 1.58; }
 
-  .mp-testimonials__photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 34%;
-  }
+  /* Testimonios */
+  .mp-testimonials__copy { padding: 32px 24px 0; }
+  .mp-testimonials__lead { margin: 20px 0 28px; }
+  .mp-featured-quote { padding-left: 20px; }
+  .mp-featured-quote blockquote { max-width: 100%; font-size: 23px; line-height: 1.36; }
+  .mp-testimonials__small { grid-template-columns: 1fr; margin: 28px -24px 0; }
+  .mp-testimonials__small article { padding: 22px 24px; }
+  .mp-testimonials__small article + article { border-left: 0; border-top: 1px solid var(--line-color); }
+  .mp-testimonials__small p { font-size: 15px; line-height: 1.6; }
+  .mp-testimonials__photo { width: 100%; min-height: 0; height: 108vw; max-height: 560px; }
+  .mp-testimonials__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 34%; }
+  .mp-trust { grid-template-columns: repeat(3,1fr); margin-left: 0; }
+  .mp-trust article { padding: 20px 10px; }
+  .mp-trust article + article { border-left: 1px solid var(--line-color); border-top: 0; }
+  .mp-trust strong { font-size: 16px; }
+  .mp-trust small { font-size: 10px; line-height: 1.4; }
 
-  .mp-trust {
-    grid-template-columns: repeat(3, 1fr);
-    margin-left: 0;
-  }
+  /* Etapas de la vida */
+  .mp-life__head { gap: 20px; }
+  .mp-life__visual { margin-top: 28px; }
+  .mp-life__photo { width: 100%; height: 70vw; min-height: 270px; max-height: 390px; }
+  .mp-life__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 48%; }
+  .mp-life__quote { padding: 26px 24px; }
+  .mp-life__quote b { font-size: 44px; }
+  .mp-life__quote p { max-width: 100%; margin-top: 16px; font-size: 21px; line-height: 1.35; }
+  .mp-life__stages { grid-template-columns: 1fr 1fr; width: 100%; }
+  .mp-stage { padding: 22px 16px 25px; }
+  .mp-stage + .mp-stage { border-left: 1px solid var(--line-color); }
+  .mp-stage:nth-child(3) { border-left: 0; }
+  .mp-stage:nth-child(n+3) { border-top: 1px solid var(--line-color); }
+  .mp-stage__number { width: 46px; height: 46px; font-size: 17px; }
+  .mp-stage small { font-size: 10px; min-height: 20px; }
+  .mp-stage h3 { font-size: 18px; line-height: 1.18; }
+  .mp-stage p { font-size: 14px; line-height: 1.58; }
 
-  .mp-trust article {
-    padding: 22px 10px;
-  }
-
-  .mp-trust article + article {
-    border-left: 1px solid var(--line-color);
-    border-top: 0;
-  }
-
-  .mp-trust strong {
-    font-size: 16px;
-  }
-
-  .mp-trust small {
-    font-size: 9px;
-  }
-
-
-  /* -------------------------------------------------------
-     07 — Etapas de la vida
-     ------------------------------------------------------- */
-
-  .mp-life__head {
-    gap: 20px;
-  }
-
-  .mp-life__visual {
-    margin-top: 30px;
-  }
-
-  .mp-life__photo {
-    width: 100%;
-    height: 72vw;
-    min-height: 270px;
-    max-height: 390px;
-  }
-
-  .mp-life__photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 48%;
-  }
-
-  .mp-life__quote {
-    padding: 28px 24px;
-  }
-
-  .mp-life__quote b {
-    font-size: 48px;
-  }
-
-  .mp-life__quote p {
-    max-width: 100%;
-    margin-top: 18px;
-    font-size: 22px;
-    overflow-wrap: anywhere;
-  }
-
-  .mp-life__stages {
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-  }
-
-  .mp-stage {
-    padding: 24px 16px 27px;
-  }
-
-  .mp-stage + .mp-stage {
-    border-left: 1px solid var(--line-color);
-  }
-
-  .mp-stage:nth-child(3) {
-    border-left: 0;
-  }
-
-  .mp-stage:nth-child(n+3) {
-    border-top: 1px solid var(--line-color);
-  }
-
-  .mp-stage h3 {
-    font-size: 19px;
-  }
-
-  .mp-stage p {
-    font-size: 12px;
-    line-height: 1.55;
-  }
-
-
-  /* -------------------------------------------------------
-     08 — Contacto
-     ------------------------------------------------------- */
-
-  .mp-contact__copy {
-    padding: 34px 24px 30px;
-  }
-
-  .mp-contact__lead {
-    margin: 20px 0 28px;
-  }
-
-  .mp-locations {
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
-  .mp-location {
-    padding: 20px 0;
-  }
-
-  .mp-location + .mp-location {
-    border-left: 0;
-    border-top: 1px solid var(--line-color);
-  }
-
-  .mp-contact__data {
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
-
-  .mp-contact__data div {
-    padding: 14px 0;
-  }
-
-  .mp-contact__data div + div {
-    border-left: 0;
-    border-top: 1px solid var(--line-color);
-  }
-
+  /* Contacto */
+  .mp-contact__copy { padding: 32px 24px 28px; }
+  .mp-contact__lead { margin: 20px 0 28px; }
+  .mp-locations, .mp-contact__data { grid-template-columns: 1fr; width: 100%; }
+  .mp-location { padding: 20px 0; }
+  .mp-location + .mp-location,
+  .mp-contact__data div + div { border-left: 0; border-top: 1px solid var(--line-color); }
+  .mp-location h3 { font-size: 17px; }
+  .mp-location p { font-size: 15px; line-height: 1.58; }
+  .mp-contact__data div { padding: 14px 0; }
   .mp-contact__visual {
     width: 100%;
     min-height: 0;
@@ -996,7 +407,6 @@
     flex-direction: column;
     overflow: visible;
   }
-
   .mp-contact__visual > img {
     width: 100%;
     height: 92vw;
@@ -1005,11 +415,9 @@
     object-fit: cover;
     object-position: center;
   }
-
   .mp-appointment {
     position: static;
-    left: auto;
-    right: auto;
+    inset: auto;
     transform: none;
     width: auto;
     max-width: none;
@@ -1020,160 +428,50 @@
     border-top: 1px solid var(--line-color);
     backdrop-filter: none;
   }
+  .mp-appointment h3 { font-size: 24px; }
+  .mp-appointment p { font-size: 15px; line-height: 1.58; }
 
-  .mp-appointment h3 {
-    font-size: 25px;
-  }
-
-
-  /* -------------------------------------------------------
-     Footer + WhatsApp
-     ------------------------------------------------------- */
-
-  .mp-footer {
-    padding: 26px 22px 90px;
-    flex-direction: column;
-    gap: 8px;
-    line-height: 1.5;
-  }
-
-  .mp-whatsapp {
-    right: 18px;
-    bottom: 18px;
-    width: 56px;
-    height: 56px;
-    max-width: none;
-  }
+  .mp-footer { padding: 26px 22px 90px; flex-direction: column; gap: 8px; line-height: 1.5; }
+  .mp-whatsapp { right: 18px; bottom: 18px; width: 56px; height: 56px; max-width: none; }
 }
-
-
-/* =========================================================
-   03 — COMPACT MOBILE
-   ========================================================= */
 
 @media (max-width: 430px) {
+  :root { --page-x: 18px; --section-y-mobile: 62px; }
+  .mp-shell { margin-left: 18px; margin-right: 18px; }
 
-  :root {
-    --page-x: 18px;
+  .mp-header { padding: 17px 18px; }
+  .mp-brand { grid-template-columns: 68px 1px minmax(0,1fr); column-gap: 14px; }
+  .mp-brand__mark { font-size: 52px; }
+  .mp-brand__divider { height: 68px; }
+  .mp-brand__name { font-size: 16px; }
+  .mp-brand__role { margin-top: 6px; font-size: 10.5px; line-height: 1.4; }
+  .mp-menu { margin-left: 8px; }
+
+  .mp-services__head h2, .mp-about h2, .mp-trajectory h2,
+  .mp-process h2, .mp-testimonials h2, .mp-life h2, .mp-contact h2 {
+    font-size: clamp(36px,10.2vw,44px);
   }
 
-  .mp-shell {
-    margin-left: 18px;
-    margin-right: 18px;
-  }
-
-
-  /* Header */
-
-  .mp-header {
-    padding: 17px 18px;
-  }
-
-  .mp-brand {
-    grid-template-columns: 68px 1px minmax(0, 1fr);
-    column-gap: 14px;
-  }
-
-  .mp-brand__mark {
-    font-size: 52px;
-  }
-
-  .mp-brand__divider {
-    height: 68px;
-  }
-
-  .mp-brand__name {
-    font-size: 16px;
-  }
-
-  .mp-brand__role {
-    margin-top: 6px;
-    font-size: 10.5px;
-    line-height: 1.4;
-  }
-
-  .mp-menu {
-    margin-left: 8px;
-  }
-
-
-  /* Hero */
-
-  .mp-hero__copy {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .mp-hero h1 {
-    font-size: clamp(44px, 13vw, 56px);
-  }
-
-  .mp-hero__media {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-}
-
-.mp-hero__media img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  }
-
-  .mp-hero__features {
-    grid-template-columns: 1fr;
-  }
-
-  .mp-hero-feature + .mp-hero-feature {
-    border-left: 0;
-    border-top: 1px solid var(--line-color);
-  }
-
-
-  /* Areas de atención */
+  .mp-hero__copy { padding-left: 18px; padding-right: 18px; }
+  .mp-hero h1 { font-size: clamp(43px,12.2vw,54px); }
+  .mp-hero__media { width: calc(100% - 28px); height: 500px; }
+  .mp-hero__features { grid-template-columns: 1fr; }
+  .mp-hero-feature + .mp-hero-feature { border-left: 0; border-top: 1px solid var(--line-color); }
 
   .mp-service {
-    grid-template-columns: 34px 30px minmax(0, 1fr);
-    column-gap: 12px;
+    grid-template-columns: 46px minmax(0,1fr);
+    column-gap: 18px;
     padding: 24px 0;
   }
-
-  .mp-service__index {
-    font-size: 21px;
-  }
-
-  .mp-service .mp-icon {
-    width: 28px;
-    height: 28px;
-    flex-basis: 28px;
-  }
-
-  .mp-service h3 {
-    font-size: 17px;
-    line-height: 1.25;
-  }
-
-  .mp-service p {
-    font-size: 15px;
-    line-height: 1.55;
-  }
-
-  .mp-service__arrow {
-    display: none;
-  }
-
-
-  /* Single-column information grids */
+  .mp-service__index, .mp-service__arrow { display: none; }
+  .mp-service .mp-icon { width: 38px; height: 38px; flex-basis: 38px; }
+  .mp-service h3 { font-size: 17px; }
+  .mp-service p { font-size: 15px; }
 
   .mp-trajectory__timeline,
   .mp-process__steps,
   .mp-life__stages,
-  .mp-trust {
-    grid-template-columns: minmax(0, 1fr);
-  }
+  .mp-trust { grid-template-columns: 1fr; }
 
   .mp-milestone + .mp-milestone,
   .mp-process-step + .mp-process-step,
@@ -1183,191 +481,11 @@
     border-top: 1px solid var(--line-color);
   }
 
-  .mp-trust strong {
-    font-size: 15px;
-  }
+  .mp-principles { grid-template-columns: 1fr; }
+  .mp-principle { padding-inline: 0; }
+  .mp-trust strong { font-size: 15px; }
 }
-
 
 /* =========================================================
-   END — MEDICAL PREMIUM V5 RESPONSIVE
+   END — MEDICAL PREMIUM V6 RESPONSIVE
    ========================================================= */
-   /* =========================================================
-   HERO MOBILE — ENCUADRE FINAL
-   ========================================================= */
-
-@media (max-width: 760px) {
-
-  .mp-hero__media {
-    width: calc(100% - 32px);
-    height: 520px;
-    aspect-ratio: auto;
-    margin: 16px auto 0;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .mp-hero__media img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 28%;
-  }
-
-  .mp-hero__note {
-    left: 24px;
-    right: 0;
-    bottom: 20px;
-    width: auto;
-  }
-}
-/* =========================================================
-   PROCESS PRIVACY CARD — FIX DESKTOP + MOBILE
-   ========================================================= */
-
-/* DESKTOP */
-.mp-process__media {
-  position: relative;
-  overflow: hidden;
-}
-
-.mp-process__privacy {
-  position: absolute;
-  right: 28px;
-  bottom: 28px;
-
-  width: min(420px, 52%);
-  height: auto;
-  min-height: 0;
-
-  padding: 28px 30px;
-
-  background: var(--medical-wine);
-  color: #fff;
-
-  display: block;
-}
-
-.mp-process__privacy .mp-icon {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 18px;
-}
-
-.mp-process__privacy h3 {
-  margin: 0 0 10px;
-  font: 400 26px/1.15 var(--font-display);
-  color: #fff;
-}
-
-.mp-process__privacy p {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.55;
-  color: rgba(255,255,255,.88);
-}
-
-
-/* MOBILE */
-@media (max-width: 760px) {
-
-  .mp-process__media {
-    overflow: visible;
-  }
-
-  .mp-process__privacy {
-    position: relative;
-    right: auto;
-    bottom: auto;
-
-    width: 100%;
-    height: auto;
-    min-height: 0;
-
-    padding: 26px 24px;
-
-    background: var(--medical-wine);
-  }
-
-  .mp-process__privacy .mp-icon {
-    width: 26px;
-    height: 26px;
-    margin-bottom: 16px;
-  }
-
-  .mp-process__privacy h3 {
-    margin: 0 0 10px;
-    font-size: 24px;
-    line-height: 1.18;
-  }
-
-  .mp-process__privacy p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.55;
-  }
-}
-/* =========================================================
-   PROCESS — MOBILE ALIGNMENT FINAL
-   Centra imagen + tarjeta dentro del mismo eje
-   ========================================================= */
-
-@media (max-width: 760px) {
-
-  .mp-process__media {
-    position: relative;
-    width: calc(100% - 48px);
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: visible;
-  }
-
-  .mp-process__media > img {
-    display: block;
-    width: 100%;
-    height: auto;
-    margin: 0;
-    object-fit: cover;
-  }
-
-  .mp-process__privacy {
-    position: relative;
-    inset: auto;
-
-    width: 100%;
-    max-width: none;
-
-    margin: 0;
-
-    padding: 28px 26px;
-
-    box-sizing: border-box;
-
-    background: var(--medical-wine);
-  }
-
-}
-/* =========================================================
-   TRAJECTORY PHOTO — MOBILE CENTERING
-   ========================================================= */
-
-@media (max-width: 760px) {
-
-  .mp-trajectory__photo {
-    width: calc(100% - 48px);
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .mp-trajectory__photo > img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-  }
-
-}
