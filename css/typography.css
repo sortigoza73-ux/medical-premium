@@ -1,7 +1,131 @@
+/* =========================================================
+   MEDICAL PREMIUM V2
+   TYPOGRAPHY SYSTEM
+   ========================================================= */
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600&display=swap");
-html{font-size:16px}
-body{font-family:var(--font-body);color:var(--medical-ink);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-.mp-display{font-family:var(--font-display);font-weight:400}
-.mp-eyebrow{font-size:11px;line-height:1.3;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--medical-wine)}
-.mp-lead{font-size:17px;line-height:1.72;color:var(--medical-gray-700)}
+
+
+/* =========================================================
+   01 — BASE
+   ========================================================= */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--medical-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   02 — EDITORIAL DISPLAY
+   ========================================================= */
+
+.mp-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+
+/* =========================================================
+   03 — EYEBROWS / LABELS
+   ========================================================= */
+
+.mp-eyebrow {
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--medical-wine);
+}
+
+
+/* =========================================================
+   04 — LEAD TEXT
+   ========================================================= */
+
+.mp-lead {
+  font-size: 18px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--medical-gray-700);
+}
+
+
+/* =========================================================
+   05 — CONTENT TEXT
+   ========================================================= */
+
+.mp-body {
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--medical-gray-700);
+}
+
+.mp-body-small {
+  font-size: 15px;
+  line-height: 1.65;
+  font-weight: 400;
+  color: var(--medical-gray-700);
+}
+
+
+/* =========================================================
+   06 — MICROCOPY
+   Sólo metadata, labels, matrícula, numeración, etc.
+   Nunca contenido médico principal.
+   ========================================================= */
+
+.mp-meta {
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 500;
+  letter-spacing: .04em;
+  color: var(--medical-gray-700);
+}
+
+
+/* =========================================================
+   07 — MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  body {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .mp-eyebrow {
+    font-size: 11px;
+  }
+
+  .mp-lead {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .mp-body {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .mp-body-small {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .mp-meta {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
